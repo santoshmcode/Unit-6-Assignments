@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Imgur Clone</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link
+            href="//fonts.googleapis.com/css?family=ABeeZee&subset=latin"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav flex">
+                <div class="logo-container flex">
+                    <a href="#">
+                        <img src="./assets/logo.svg" alt="Imgur Logo" />
+                    </a>
+                    <div class="add-post flex">
+                        <img src="./assets/plus-icon.svg" alt="plus-icon" />
+                        <p>New post</p>
+                    </div>
+                </div>
+                <div class="search-container flex">
+                    <input
+                        type="text"
+                        placeholder="Images, #tags, @users oh my!"
+                        id="search"
+                    />
+                    <img src="./assets/search-icon.svg" alt="search icon" />
+                    <div class="search-results" id="search-results"></div>
+                </div>
+                <div class="signin-container flex">
+                    <div class="signin">Sign in</div>
+                    <div class="signin signup">Sign up</div>
+                </div>
+            </nav>
+            <div class="tags-section">
+                <p class="head-qoute">
+                    Life is what happens when you're busy making memes.
+                </p>
+                <div class="tag-container">
+                    <div class="tags-head">
+                        <p>EXPLORE TAGS</p>
+                        <p>MORE TAGS +</p>
+                    </div>
+                    <div class="all-tags">
+                        <div class="card">
+                            <img src="./assets/pattern-1.jpeg" alt="pattern" />
+                            <div
+                                class="card-content"
+                                style="background: #9748b6"
+                            >
+                                <div class="card-title">Storytime</div>
+                                <div class="card-sub-title">
+                                    Featured・107,268 Posts
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-small">
+                            <img src="./assets/pattern-2.jpeg" alt="pattern" />
+                            <div
+                                class="card-content"
+                                style="background: #1e5f43"
+                            >
+                                <div class="card-title">Metal</div>
+                                <div class="card-sub-title">54,324 Posts</div>
+                            </div>
+                        </div>
+                        <div class="card card-small">
+                            <img src="./assets/pattern-3.jpeg" alt="pattern" />
+                            <div
+                                class="card-content"
+                                style="background: #a88680"
+                            >
+                                <div class="card-title">Football</div>
+                                <div class="card-sub-title">13,027 Posts</div>
+                            </div>
+                        </div>
+                        <div class="card card-small">
+                            <img src="./assets/pattern-4.jpeg" alt="pattern" />
+                            <div
+                                class="card-content"
+                                style="background: #aa33e6"
+                            >
+                                <div class="card-title">Secret Santa</div>
+                                <div class="card-sub-title">50,306 Posts</div>
+                            </div>
+                        </div>
+                        <div class="card card-small">
+                            <img src="./assets/pattern-5.png" alt="pattern" />
+                            <div
+                                class="card-content"
+                                style="background: #24565e"
+                            >
+                                <div class="card-title">Steve Irwin</div>
+                                <div class="card-sub-title">499 Posts</div>
+                            </div>
+                        </div>
+                        <div class="card card-small">
+                            <img src="./assets/pattern-6.jpeg" alt="pattern" />
+                            <div
+                                class="card-content"
+                                style="background: rgb(129, 176, 87)"
+                            >
+                                <div class="card-title">Inspiring</div>
+                                <div class="card-sub-title">84,704 Posts</div>
+                            </div>
+                        </div>
+                        <div class="card card-small">
+                            <img src="./assets/pattern-7.jpeg" alt="pattern" />
+                            <div
+                                class="card-content"
+                                style="background: rgb(80, 83, 90)"
+                            >
+                                <div class="card-title">Family</div>
+                                <div class="card-sub-title">7,543 Posts</div>
+                            </div>
+                        </div>
+                        <div class="card card-small">
+                            <img src="./assets/pattern-8.png" alt="pattern" />
+                            <div
+                                class="card-content"
+                                style="background: rgb(21, 149, 89)"
+                            >
+                                <div class="card-title">Cat</div>
+                                <div class="card-sub-title">260,933 Posts</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="main">
+            <div class="main-nav">
+                <div class="drop-down">MOST VITAL</div>
+                <div class="main-nav-right">
+                    <div class="drop-down">NEWEST</div>
+                    <div class="icons">
+                        <img src="./assets/main-icon1.svg" alt="icon1" />
+                        <img src="./assets/main-icon2.svg" alt="icon2" />
+                        <img src="./assets/main-icon3.svg" alt="icon3" />
+                    </div>
+                </div>
+            </div>
+            <div class="main-data-container main-nav" id="containt"></div>
+        </main>
+    </body>
+    <script src="./script.js"></script>
+</html>
