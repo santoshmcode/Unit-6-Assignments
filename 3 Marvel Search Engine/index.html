@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="//fonts.googleapis.com/css?family=Antic&subset=latin"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+
+        <title>Marvel Search Engine</title>
+    </head>
+    <body>
+        <div class="outter-container">
+            <main class="container" id="main-container">
+                <div class="input-box">
+                    <input id="input" type="text" placeholder="e.g. Ironman" />
+                    <i
+                        id="search-btn"
+                        class="fa fa-search"
+                        aria-hidden="true"
+                    ></i>
+                </div>
+                <div class="input-box-next" id="input-box-next"></div>
+            </main>
+            <main class="container container2" id="result-container">
+                <h1 id="comic-title"></h1>
+                <div class="comic-data" id="comic-data"></div>
+                <div class="thumbnail">
+                    <img id="thumbnail-img" src="" alt="thumbnail" />
+                </div>
+                <div id="back" class="back">
+                    <div>BACK</div>
+                </div>
+            </main>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

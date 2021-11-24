@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Antic", sans-serif;
+    /* color: #fff; */
+}
+
+.outter-container {
+    height: 100vh;
+    /* padding: 20px; */
+    background: #20366a;
+    overflow: hidden;
+}
+
+.container {
+    height: calc(100% - 40px);
+    background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 89, 255, 0.397)
+        ),
+        url(./assets/bg.jpeg) no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-start; */
+    transition: all 1s ease;
+    margin: 20px;
+}
+
+.input-box {
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    height: 40px;
+    border-radius: 5px;
+    position: relative;
+    top: 25%;
+    left: 10%;
+}
+
+.input-box-next {
+    width: 450px;
+    background: rgba(255, 255, 255, 0.205);
+    max-height: 300px;
+    /* border-radius: 5px; */
+    position: relative;
+    top: 27%;
+    left: 10%;
+    overflow-y: hidden;
+}
+.input-box-next::-webkit-scrollbar {
+    width: 10px;
+}
+
+.input-box-next::-webkit-scrollbar-track {
+    background: transparent; /* color of the tracking area */
+}
+
+.input-box-next::-webkit-scrollbar-thumb {
+    background-color: #7188d3;
+    border-radius: 20px;
+}
+
+.input-box-next:hover {
+    overflow-y: scroll;
+}
+
+.input-box > input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    letter-spacing: 1.4px;
+    font-size: 14px;
+}
+
+.fa-search {
+    color: rgba(0, 34, 97, 0.733);
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transform: scale(1.1);
+}
+.fa-search:hover {
+    color: #000;
+}
+
+.p-results {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.p-results:hover {
+    background: #fff;
+}
+
+.container2 {
+    position: relative;
+    background: #20366a;
+    color: rgb(233, 233, 233);
+}
+
+h1 {
+    text-align: center;
+}
+
+.back {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    color: #000;
+    background: rgb(219, 219, 219);
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(50%);
+}
+
+.thumbnail {
+    position: absolute;
+    height: 70%;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.thumbnail > img {
+    height: 100%;
+    /* filter: opacity(0.8); */
+}
+
+.comic-data {
+    background-color: rgba(255, 255, 255, 0.74);
+    max-height: 70%;
+    width: 450px;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    padding: 10px;
+}
+
+.comic-data > div {
+    width: 100%;
+    height: 7%;
+    color: rgb(15, 15, 15);
+    text-align: center;
+    font-size: 18px;
+}
