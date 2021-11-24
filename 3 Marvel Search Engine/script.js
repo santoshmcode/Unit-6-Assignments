@@ -7,7 +7,9 @@ const input = document.getElementById("input");
 const searchResult = document.getElementById("input-box-next");
 const PUBLIC_KEY = "da35a1a7ef103683b22151bf08133393";
 const backBtn = document.getElementById("back");
-console.log("backBtn:", backBtn);
+const comicData = document.getElementById("comic-data");
+const thumbnailImg = document.getElementById("thumbnail-img");
+const comicTitle = document.getElementById("comic-title");
 
 var timeId = null;
 
@@ -64,7 +66,7 @@ const populateSearchResult = (data) => {
             console.log("Hi");
             console.log("resultContainer", resultContainer);
             resultContainer.style.marginTop = "calc(-100vh + 20px)";
-
+            input.value = null;
             populateDetailData(id);
         });
 
@@ -93,17 +95,34 @@ const populateDetailData = async (id) => {
         creators: { items, available },
         prices: { type, price },
     } = results;
-    for (let i = 0; i < available; i++) {
+    for (let i = 0; i < available || i < 5; i++) {
         console.log(items[i].role, items[i].name);
+        const roleDiv = document.createElement("div");
+        const nameDiv = document.createElement("div");
+        roleDiv.innerHTML = items[i].role;
+        nameDiv.innerHTML = items[i].name;
+        comicData.appendChild(roleDiv);
+        comicData.appendChild(nameDiv);
     }
+
+    if (type) {
+        const typeDiv = document.createElement("div");
+        const priceDiv = document.createElement("div");
+        typeDiv.innerHTML = type;
+        priceDiv.innerHTML = price;
+        comicData.appendChild(typeDiv);
+        comicData.appendChild(priceDiv);
+    }
+
+    thumbnailImg.src = `${path}/portrait_uncanny.jpg`;
+    comicTitle.innerHTML = title;
     console.log("title, path:", title, `${path}/portrait_uncanny.jpg`);
 };
 
 backBtn.addEventListener("click", () => {
     resultContainer.style.marginTop = "calc(100vh + 20px)";
+    comicData.innerHTML = null;
+    comicTitle.innerHTML = null;
+    thumbnailImg.src = null;
+    searchResult.innerHTML = null;
 });
-
-// https://gateway.marvel.com:443/v1/public/comics/5645?apikey=
-
-// delete this line later
-resultContainer.style.marginTop = "calc(-100vh + 20px)";
