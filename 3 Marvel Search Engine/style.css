@@ -30,10 +30,6 @@
     margin: 20px;
 }
 
-.container2 {
-    position: relative;
-}
-
 .input-box {
     width: 450px;
     display: flex;
@@ -106,4 +102,61 @@
 
 .p-results:hover {
     background: #fff;
+}
+
+.container2 {
+    position: relative;
+    background: #20366a;
+    color: rgb(233, 233, 233);
+}
+
+h1 {
+    text-align: center;
+}
+
+.back {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    color: #000;
+    background: rgb(219, 219, 219);
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(50%);
+}
+
+.thumbnail {
+    position: absolute;
+    height: 70%;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.thumbnail > img {
+    height: 100%;
+    /* filter: opacity(0.8); */
+}
+
+.comic-data {
+    background-color: #fff;
+    height: 70%;
+    width: 350px;
+    position: absolute;
+    height: 70%;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comic-data > div {
+    width: 50%;
 }
